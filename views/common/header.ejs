@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"rel="stylesheet"/>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white fixed w-full z-10 top-0">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="/" class="text-white"><img src="https://static.ambitionbox.com/alpha/company/photos/logos/om-shanti-group.jpg"  class="logo-image"></a>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-4">
+                <a href="/" class="hover:bg-gray-700 px-3 py-2 rounded">Home</a>
+                <a href="/about" class="hover:bg-gray-700 px-3 py-2 rounded">About</a>
+                <a href="/ewrwfd" class="hover:bg-gray-700 px-3 py-2 rounded">Services</a>
+                <a href="/contect" class="hover:bg-gray-700 px-3 py-2 rounded">Contact</a>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center space-x-2">
+                <input type="text" name="q" placeholder="Search..." class="py-2 px-3 rounded text-black" value="" id="q">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded" id="search" >Search</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white">
+            <nav class="flex flex-col space-y-2 px-6 py-4">
+                <a href="/home" class="hover:bg-gray-700 px-3 py-2 rounded">Home</a>
+                <a href="/about" class="hover:bg-gray-700 px-3 py-2 rounded">About</a>
+                <a href="/seadfd" class="hover:bg-gray-700 px-3 py-2 rounded">Services</a>
+                <a href="/contect" class="hover:bg-gray-700 px-3 py-2 rounded">Contact</a>
+                <div class="flex items-center space-x-2 mt-4">
+                    <input type="text" placeholder="Search..." class="py-2 px-3 rounded text-black w-full">
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded">Search</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Toggle Mobile Menu
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+	search.addEventListener('click', () => {
+		let searchKey = document.getElementById("q").value
+		if(searchKey != ''){
+			let query = window.origin+'/search?q='+searchKey;
+			window.location.href = query;
+		}
+        });
+	q.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the form from submitting the default way
+	    let searchKey = document.getElementById("q").value
+	    if(searchKey != ''){
+		let query = window.origin+'/search?q='+searchKey;
+		window.location.href = query;
+	    }
+	    
+        }
+    });
+    </script>
+
+</body>
+</html>

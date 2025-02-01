@@ -1,0 +1,117 @@
+body{
+
+	background-color: #eee;
+	overflow-x: hidden;
+}
+
+.container{
+	width: 900px;
+}
+
+.card{
+
+	background-color: #fff;
+	border:none;
+	border-radius: 10px;
+	width: 190px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+@media (min-width:767px) {
+    .product {
+    display: flex;
+    }
+}
+
+.pro-card{
+	margin: 10px;
+}
+
+/* Slider container */
+.slider {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+    animation: slide 16s infinite;
+}
+.clearfix {
+	margin-top: 7rem;
+    }
+    .clearfix-min {
+	margin-top: 2rem;
+    }
+/* Single slide */
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+img.logo-image {
+	border-radius: 15px;
+    }
+/* Auto sliding keyframes */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Navigation buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}
+ /* Additional styles for the image gallery */
+ .thumbnail {
+	cursor: pointer;
+	transition: transform 0.3s;
+    }
+    .thumbnail:hover {
+	transform: scale(1.05);
+    }
+    @media screen and (max-width: 767px) {
+	    .small-image {display: -webkit-inline-box;}
+    }
+
+    .contect-page {
+	margin: auto;
+	width: 35rem;
+	margin-top: 25px;
+    }

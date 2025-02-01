@@ -1,0 +1,42 @@
+[
+	{
+	    "product_id": 1,
+	    "name": "Wireless Headphones",
+	    "images": [
+		"https://example.com/images/product1_main.jpg",
+		"https://example.com/images/product1_1.jpg",
+		"https://example.com/images/product1_2.jpg"
+	    ],
+	    "description": "High-quality wireless headphones with noise cancellation and long battery life.",
+	    "price": 99.99,
+	    "category": "Electronics",
+	    "availability": true
+	},
+	{
+	    "product_id": 2,
+	    "name": "Smart Watch",
+	    "images": [
+		"https://example.com/images/product2_main.jpg",
+		"https://example.com/images/product2_1.jpg",
+		"https://example.com/images/product2_2.jpg"
+	    ],
+	    "description": "Feature-rich smart watch with heart rate monitoring and GPS tracking.",
+	    "price": 149.99,
+	    "category": "Wearables",
+	    "availability": true
+	},
+	{
+	    "product_id": 3,
+	    "name": "Gaming Laptop",
+	    "images": [
+		"https://example.com/images/product3_main.jpg",
+		"https://example.com/images/product3_1.jpg",
+		"https://example.com/images/product3_2.jpg"
+	    ],
+	    "description": "Powerful gaming laptop with high-end graphics and fast processing speed.",
+	    "price": 1299.99,
+	    "category": "Computers",
+	    "availability": false
+	}
+    ]
+    

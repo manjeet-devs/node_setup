@@ -1,0 +1,47 @@
+<%- header %>
+<div class="clearfix"></div>
+    <!-- Contact Form Container -->
+    <div class=" max-w-lg bg-white p-10 rounded-lg shadow-md contect-page">
+        <h1 class="text-2xl font-bold mb-6 text-center">Contact Us</h1>
+        <form id="contactForm" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                <input type="text" id="subject" name="subject" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required></textarea>
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition">Send Message</button>
+            </div>
+        </form>
+        <div id="responseMessage" class="mt-4 text-center"></div>
+    </div>
+<div class="clearfix-min"></div>
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Display a confirmation message (in a real application, you would send the data to a server)
+            document.getElementById('responseMessage').innerText = `Thank you, ${name}! Your message has been sent.`;
+
+            // Clear the form
+            this.reset();
+        });
+    </script>
+<%- footer %>
+

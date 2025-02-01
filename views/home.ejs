@@ -1,0 +1,61 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body class="">
+	<%- header %>
+	{{header}}
+	<div class="clearfix"></div>
+  <div class="slider">
+	<div class="slides">
+	    <img src="./image/image.png" alt="Image 1" class="slide">
+	    <img src="./image/image.png" alt="Image 2" class="slide">
+	    <img src="./image/image.png" alt="Image 3" class="slide">
+	    <img src="./image/image.png" alt="Image 4" class="slide">
+	</div>
+	<button class="nav-button prev">&#9664;</button>
+	<button class="nav-button next">&#9654;</button>
+    </div>
+    <div class="clearfix-min"></div>
+    <!-- product start Section -->
+    <div class="product-card">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+	    <% for(let i = 0; i < 12; i++) { %>
+            <div class="pro-card bg-white p-4 shadow rounded">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/062.webp" class="card-img-top w-full h-48 object-cover rounded" alt="Chicago Skyscrapers"/>
+                <div class="card-body mt-4">
+                    <h5 class="card-title text-xl font-semibold mb-2">Card title</h5>
+                    <a href="/product" class="card-link">
+                        <button type="button" class="btn btn-primary px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Product Details</button>
+                    </a>
+                </div>
+            </div>
+	    <% } %>
+	</div>
+    </div>
+  <!-- product end Section -->
+
+       <!-- Blog start Section -->
+       <section class="mx-auto p-3">
+        <h2 class="text-3xl font-bold text-center mb-4">Our Blog</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Blog Post 1 -->
+	    <% for(let i = 0; i < 4; i++) { %>
+            <div class="bg-white p-4 rounded shadow">
+                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/062.webp" alt="Blog Image" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-semibold mb-2">Blog Post Title 1</h3>
+                <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="text-blue-500 hover:underline">Read more</a>
+            </div>
+	    <% } %>
+            <!-- Add more blog posts as needed -->
+        </div>
+    </section>
+    <!-- Blog end Section -->
+    <%- footer %>
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+	<%- header %>
+	<div class="clearfix"></div>
+    <!-- Product Description Section -->
+    <section class="">
+        <div class="flex flex-col-reverse md:flex-row md:grid-cols-3">
+            <!-- Small Images - shown below on mobile, on the side on desktop -->
+            <div class="flex flex-col items-center md:w-1/4 p-4 space-y-4 small-image">
+                <img src="https://via.placeholder.com/100x100" alt="Thumbnail 1" class="thumbnail w-16 md:w-24 rounded-lg border border-gray-300" onclick="updateMainImage(this.src)">
+                <img src="https://via.placeholder.com/200x200" alt="Thumbnail 2" class="thumbnail w-16 md:w-24 rounded-lg border border-gray-300" onclick="updateMainImage(this.src)">
+                <img src="https://via.placeholder.com/300x300" alt="Thumbnail 3" class="thumbnail w-16 md:w-24 rounded-lg border border-gray-300" onclick="updateMainImage(this.src)">
+                <img src="https://via.placeholder.com/400x400" alt="Thumbnail 4" class="thumbnail w-16 md:w-24 rounded-lg border border-gray-300" onclick="updateMainImage(this.src)">
+            </div>
+            <!-- Product Details -->
+            <div class="md:w-1/2 md:order-3 p-4">
+                <h1 class="text-3xl font-bold mb-4">Product Title</h1>
+                <p class="text-gray-600 mb-4">Product ID: 12345</p>
+                <p class="text-2xl text-green-600 font-semibold mb-4">$99.99</p>
+                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Get Quotes</button>
+            </div>
+            <!-- Main Product Image -->
+            <div class="md:w-1/2 md:order-1 p-4">
+                <img id="mainImage" src="https://via.placeholder.com/400x400" alt="Product Image" class="rounded-lg w-full object-cover">
+            </div>
+        </div>
+        <!-- Product Description -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold mb-4">Product Description</h2>
+            <p class="text-gray-700 leading-relaxed">This is where you provide a detailed description of the product. You can talk about the features, benefits, and any other relevant information that would help customers make an informed purchasing decision. Be sure to highlight the unique selling points and quality of the product.</p>
+        </div>
+    </section>
+    <%- footer %>
+    <script>
+        // JavaScript function to update the main image
+        function updateMainImage(src) {
+            document.getElementById("mainImage").src = src;
+        }
+    </script>
+
+
